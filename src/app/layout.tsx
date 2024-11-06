@@ -6,6 +6,9 @@ import '@/styles/globals.css'
 export const metadata: Metadata = {
   title: 'Cristo Pérez Suárez | Technical Test',
   description: 'Technical test performed by Cristo Rubén Pérez Suárez',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
