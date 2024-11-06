@@ -1,5 +1,3 @@
-export default function Home() {
-  return <main>
-    <h1>Technical Test</h1>
-  </main>
+export default function HomePage() {
+  return <h1>Technical Test</h1>
 }

@@ -16,10 +16,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${figtree.className} antialiased w-full bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]`}
+        className={`${figtree.className} antialiased w-full min-h-dvh bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]`}
       >
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )
