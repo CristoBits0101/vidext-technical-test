@@ -1,3 +1,4 @@
+import Header from '@/layouts/header'
 import type { Metadata } from 'next'
 import { figtree } from '@/lib/fonts'
 import '@/styles/globals.css'
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${figtree.className} antialiased w-full bg-[#FAFAF9] text-base`}>{children}</body>
+      <body
+        className={`${figtree.className} antialiased w-full bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
