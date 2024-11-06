@@ -10,18 +10,18 @@ import {
 
 export default function NavbarMenu() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className='text-[#262626] font-light w-full'>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href='/docs' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href='/' legacyBehavior passHref>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-normal`}>
               Inicio
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href='/docs' legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+          <Link href='/watch' legacyBehavior passHref>
+          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-normal`}>
               Vídeos
             </NavigationMenuLink>
           </Link>

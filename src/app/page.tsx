@@ -5,7 +5,7 @@ export default function HomePage() {
     <IntroArticle
       title='Crear un reproductor de videos'
       subtitle='Prueba técnica realizada por Cristo Pérez Suárez'
-      padding='pb-9'
+      padding='pb-12'
       buttonText='Explorar vídeos'
       redirectPath='/watch'
     />

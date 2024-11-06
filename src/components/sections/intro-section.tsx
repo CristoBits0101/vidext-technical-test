@@ -6,7 +6,7 @@ interface IntroSectionProps {
 export function IntroSection({ content, type }: IntroSectionProps) {
   if (!content) return null
   return type === 'title' ? (
-    <section className='text-4xl font-semibold'>
+    <section className='text-6xl font-semibold'>
       <h1 className='text-balance'>{content}</h1>
     </section>
   ) : (
