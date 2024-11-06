@@ -1,11 +1,13 @@
-import HomeIntroArticle from '@/components/articles/intro-article'
+import IntroArticle from '@/components/articles/intro-article'
 
 export default function HomePage() {
   return (
-    <HomeIntroArticle
-      title='Create a video watch player'
-      subtitle='Technical test performed by Cristo Pérez Suárez'
+    <IntroArticle
+      title='Crear un reproductor de videos'
+      subtitle='Prueba técnica realizada por Cristo Pérez Suárez'
       padding='pb-9'
+      buttonText='Explorar videos'
+      redirectPath='/watch'
     />
   )
 }
