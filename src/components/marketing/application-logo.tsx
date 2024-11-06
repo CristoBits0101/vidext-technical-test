@@ -7,8 +7,8 @@ export default function ApplicationLogo() {
       <Image
         src={Logo}
         alt='Vidext Company Logo'
-        width={80}
-        height={80}
+        width={75}
+        height={75}
         layout='fixed'
         objectFit='cover'
         loading='lazy'
