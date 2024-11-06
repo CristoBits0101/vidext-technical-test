@@ -6,7 +6,7 @@ export default function HomePage() {
       title='Crear un reproductor de videos'
       subtitle='Prueba técnica realizada por Cristo Pérez Suárez'
       padding='pb-9'
-      buttonText='Explorar videos'
+      buttonText='Explorar vídeos'
       redirectPath='/watch'
     />
   )

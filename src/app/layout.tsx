@@ -21,7 +21,7 @@ export default function RootLayout({
         className='antialiased w-full min-h-dvh bg-[#FAFAF9] text-sm grid grid-rows-[auto_1fr]'
       >
         <Header />
-        <main className='w-full grid place-content-center'>{children}</main>
+        <main className='w-full grid place-content-center p-2'>{children}</main>
       </body>
     </html>
   )
