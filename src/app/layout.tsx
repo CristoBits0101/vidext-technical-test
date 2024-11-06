@@ -1,6 +1,5 @@
 import Header from '@/layouts/header'
 import type { Metadata } from 'next'
-import { figtree } from '@/lib/fonts'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${figtree.className} antialiased w-full min-h-dvh bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]`}
+        className='antialiased w-full min-h-dvh bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]'
       >
         <Header />
         <main className='w-full grid place-content-center'>{children}</main>
