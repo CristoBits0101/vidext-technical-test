@@ -3,13 +3,15 @@ import Logo from '@/assets/icons/vidext.svg'
 
 export default function ApplicationLogo() {
   return (
-    <div>
+    <div className='w-fit h-fit'>
       <Image
         src={Logo}
         alt='Vidext Company Logo'
-        width={100}
-        height={100}
+        width={80}
+        height={80}
         layout='fixed'
+        objectFit='cover'
+        loading='lazy'
       />
     </div>
   )
