@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${figtree.className} antialiased w-full min-h-dvh bg-[#FAFAF9] text-base grid grid-rows-[auto_1fr]`}
       >
         <Header />
-        <main className='w-full'>{children}</main>
+        <main className='w-full grid place-content-center'>{children}</main>
       </body>
     </html>
   )
