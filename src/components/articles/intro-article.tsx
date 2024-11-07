@@ -20,7 +20,7 @@ export default function IntroArticle({
   if (!title && !subtitle) return null
 
   return (
-    <article className={`flex flex-col gap-6 text-center ${padding} w-[40rem]`}>
+    <article className={`flex flex-col gap-6 text-center ${padding} max-w-[40rem]`}>
       <IntroSection content={title} type='title' />
       <IntroSection content={subtitle} type='subtitle' />
       <RedirectButton buttonText={buttonText} redirectPath={redirectPath} />
