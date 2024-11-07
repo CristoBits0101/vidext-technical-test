@@ -11,11 +11,11 @@
   "dependencies": {
     "@radix-ui/react-navigation-menu": "1.2.1",
     "@radix-ui/react-slot": "1.1.0",
-    "@tanstack/react-query": "5.59.20",
-    "@trpc/client": "11.0.0-rc.608",
-    "@trpc/next": "11.0.0-rc.608",
-    "@trpc/react-query": "11.0.0-rc.608",
-    "@trpc/server": "11.0.0-rc.608",
+    "@tanstack/react-query": "^5.59.20",
+    "@trpc/client": "^11.0.0-rc.608",
+    "@trpc/next": "^11.0.0-rc.608",
+    "@trpc/react-query": "^11.0.0-rc.608",
+    "@trpc/server": "^11.0.0-rc.608",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "lucide-react": "0.454.0",
@@ -25,7 +25,7 @@
     "tailwind-merge": "2.5.4",
     "tailwindcss-animate": "1.0.7",
     "vidext-technical-test": "file:",
-    "zod": "3.23.8"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "20",
