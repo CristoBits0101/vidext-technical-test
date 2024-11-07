@@ -1,20 +1,18 @@
 'use client'
 
-import { useState } from 'react'
-import { trpc } from '@/utils/trpc'
-import VideoPlayer from '@/components/video/video-player'
-import ViewCounter from '@/components/counters/view-counter'
 import LikeCounter from '@/components/counters/like-counter'
+import VideoPlayer from '@/components/video/video-player'
+import { trpc } from '@/utils/trpc'
+import { useState } from 'react'
 
 export default function WatchPage() {
   const { data, isLoading, error } = trpc.video.getVideos.useQuery()
-  const [selectedVideoId, setSelectedVideoId] = useState<number | null>(1) // Valor por defecto: id 1
+  const [selectedVideoId, setSelectedVideoId] = useState<number | null>(1)
 
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error: {error.message}</div>
   if (!data || data.length === 0) return <div>No videos available</div>
 
-  // Actualiza `selectedVideo` para que siempre tenga un valor por defecto
   const selectedVideo =
     data.find((video) => video.id === selectedVideoId) || data[0]
 
@@ -43,11 +41,7 @@ export default function WatchPage() {
       {selectedVideo && (
         <div className='w-full mt-4'>
           <VideoPlayer video={selectedVideo} />
-          <div className='mt-2'>
-            <ViewCounter
-              videoId={selectedVideo.id}
-              initialViews={selectedVideo.views}
-            />
+          <div className='mt-2 flex gap-4'>
             <LikeCounter
               videoId={selectedVideo.id}
               initialLikes={selectedVideo.likes}
