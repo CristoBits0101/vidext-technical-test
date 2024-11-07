@@ -14,14 +14,18 @@ export default function NavbarMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href='/' legacyBehavior passHref>
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-normal`}>
+            <NavigationMenuLink
+              className={`${navigationMenuTriggerStyle()} font-normal`}
+            >
               Inicio
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href='/watch' legacyBehavior passHref>
-          <NavigationMenuLink className={`${navigationMenuTriggerStyle()} font-normal`}>
+            <NavigationMenuLink
+              className={`${navigationMenuTriggerStyle()} font-normal`}
+            >
               Vídeos
             </NavigationMenuLink>
           </Link>
