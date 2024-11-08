@@ -43,8 +43,8 @@ export default function LikeCounter({
       >
         {/* Display the appropriate image based on the `liked` state */}
         <Image
-          src={liked ? thumbUpWhite : thumbUpBlack}
-          alt={liked ? 'Like' : 'Unlike'}
+          src={liked ? thumbUpBlack : thumbUpWhite}
+          alt={liked ? 'Unlike' : 'Like'}
           width={20}
           height={20}
         />
