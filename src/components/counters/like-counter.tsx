@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { Button } from '@/components/ui/button'
 import { trpc } from '@/utils/trpc'
+import { useState } from 'react'
 
 type LikeCounterProps = {
   videoId: number
@@ -12,7 +13,7 @@ export default function LikeCounter({
   videoId,
   initialLikes,
 }: LikeCounterProps) {
-  const [liked, setLiked] = useState(false) // Nuevo estado para controlar si se ha hecho "like"
+  const [liked, setLiked] = useState(false)
   const { mutate, data } = trpc.video.incrementLike.useMutation({
     onSuccess: () => {
       setLiked(!liked)
@@ -22,16 +23,15 @@ export default function LikeCounter({
   const currentLikes = data ? data.video.likes : initialLikes
 
   return (
-    <div>
-      <p>Likes: {currentLikes}</p>
-      <button
+    <div className=''>
+      <Button
         onClick={() => mutate({ videoId })}
         className={`px-3 py-1 rounded ${
           liked ? 'bg-red-600' : 'bg-red-500'
         } text-white`}
       >
-        {liked ? 'Unlike' : 'Like'}
-      </button>
+        {liked ? 'Unlike' : 'Like'} <span>{currentLikes}</span>
+      </Button>
     </div>
   )
 }
