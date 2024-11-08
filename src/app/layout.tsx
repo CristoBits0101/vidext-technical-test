@@ -1,7 +1,7 @@
 import Header from '@/layouts/header'
+import TrpcProvider from '@/components/providers/trpc-provider.tsx'
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
-import Provider from '@/components/Provider'
 
 export const metadata: Metadata = {
   title: 'Cristo Pérez Suárez | Technical Test',
@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='antialiased w-full min-h-dvh bg-[#FAFAF9] text-sm grid grid-rows-[auto_1fr]'>
-        <Provider>
+        <TrpcProvider>
           <Header />
-          <main className='w-full grid place-content-center p-2'>
+          <main className='w-full flex justify-center items-center p-2'>
             {children}
           </main>
-        </Provider>
+        </TrpcProvider>
       </body>
     </html>
   )

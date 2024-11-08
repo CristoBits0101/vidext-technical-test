@@ -21,7 +21,7 @@ export default function IntroArticle({
 
   return (
     <article
-      className={`flex flex-col gap-6 text-center ${padding} max-w-[40rem]`}
+      className={`flex flex-col gap-6 text-center ${padding && padding} max-w-[40rem]`}
     >
       <IntroSection content={title} type='title' />
       <IntroSection content={subtitle} type='subtitle' />

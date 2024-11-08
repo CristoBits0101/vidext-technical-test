@@ -1,11 +1,22 @@
 'use client'
 
+// Import for setting up batched HTTP request links for tRPC client
 import { httpBatchLink } from '@trpc/client'
+
+// Imports for managing server state and caching in a React application
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+// Import of the configured tRPC client for making API calls
 import { trpc } from '@/server/client'
+
+// React hook for managing local component state
 import { useState } from 'react'
 
-export default function Provider({ children }: { children: React.ReactNode }) {
+export default function TrpcProvider({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const [queryClient] = useState(() => new QueryClient())
   const [trpcClient] = useState(() =>
     trpc.createClient({

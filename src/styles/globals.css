@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Contains a Reset of the Styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,6 +37,10 @@ a {
 
 button {
   cursor: pointer;
+}
+
+iframe {
+  border-radius: 0.75rem;
 }
 
 ul {
