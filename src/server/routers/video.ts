@@ -1,11 +1,12 @@
 import { router, procedure } from '@/server/trpc'
 import { z } from 'zod'
-import { videoData } from '@/mocks/videoData'
+import videoData from '@/mocks/videoData.json'
 
 export const videoRouter = router({
   getVideos: procedure.query(() => {
     return videoData
   }),
+
   incrementView: procedure
     .input(z.object({ videoId: z.number() }))
     .mutation(({ input }) => {
@@ -14,6 +15,7 @@ export const videoRouter = router({
       videoData[videoIndex].views += 1
       return { success: true, video: videoData[videoIndex] }
     }),
+
   incrementLike: procedure
     .input(z.object({ videoId: z.number() }))
     .mutation(({ input }) => {
