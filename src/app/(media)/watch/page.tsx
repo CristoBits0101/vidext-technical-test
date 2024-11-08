@@ -21,7 +21,7 @@ export default function WatchPage() {
     data.find((video) => video.id === selectedVideoId) || data[0]
 
   return (
-    <div className='flex flex-col w-full h-full gap-4 bg-yellow-50'>
+    <div className='flex flex-col justify-center items-center w-2/4 h-full gap-4'>
       {/* Video Selector */}
       <VideoSelector
         videos={data}
@@ -30,7 +30,7 @@ export default function WatchPage() {
       />
       {/* Video Player */}
       {selectedVideo && (
-        <div className='w-full bg-red-100'>
+        <div className='w-full'>
           <VideoPlayer video={selectedVideo} />
         </div>
       )}

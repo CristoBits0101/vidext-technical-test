@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className='antialiased w-full min-h-dvh bg-[#FAFAF9] text-sm grid grid-rows-[auto_1fr]'>
         <TrpcProvider>
           <Header />
-          <main className='w-full grid place-content-center p-2'>
+          <main className='w-full flex justify-center items-center p-2'>
             {children}
           </main>
         </TrpcProvider>
